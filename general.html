@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>General Printing - Meezan Printing Press</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.item {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.icon {
+    height: 140px;
+    background: #e8e8e8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.item h3 {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .items {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>General Printing</h1>
+    <p>Meezan Printing Press — Bannu</p>
+</header>
+
+<div class="container">
+
+    <a href="index.html" class="back">← Back to Home</a>
+
+    <h2>Our Printing Services</h2>
+
+    <div class="items" id="items"></div>
+
+</div>
+
+<script>
+
+const products = [
+    "Bill Books",
+    "Letterheads",
+    "Envelopes",
+    "Brochures",
+    "Flyers",
+    "Posters",
+    "Banners",
+    "Stickers",
+    "Labels",
+    "Certificates",
+    "Books",
+    "Booklets",
+    "Wedding Invitations",
+    "Business Cards",
+    "Receipt Books",
+    "Quotation Books",
+    "Invoice Books",
+    "Delivery Challans",
+    "Membership Cards",
+    "ID Cards",
+    "Menus",
+    "Calendars",
+    "Notepads",
+    "Folders",
+    "Office Files",
+    "Rubber Stamps",
+    "Product Packaging",
+    "Promotional Cards",
+    "Photo Printing",
+    "Digital Printing"
+];
+
+const icons = [
+    "📒","📄","✉️","📖","📃","📰","🖼️","🏷️","🔖","🏆",
+    "📚","📘","💌","💳","📕","📗","📙","🧾","🪪","🪪",
+    "📋","📅","📝","📁","🗂️","🔴","📦","📣","🖼️","🖨️"
+];
+
+const items = document.getElementById("items");
+
+products.forEach((product, index) => {
+
+    items.innerHTML += `
+        <div class="item">
+
+            <div class="icon">
+                ${icons[index]}
+            </div>
+
+            <h3>${product}</h3>
+
+            <p>Quality Printing</p>
+
+            <div class="price">
+                Rs. 0
+            </div>
+
+            <button>
+                Order Now
+            </button>
+
+        </div>
+    `;
+
+});
+
+</script>
+
+</body>
+</html>
