@@ -1,160 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meezan Printing Press Bannu</title>
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 25px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meezan Printing Press Bannu</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-background: #ffffff;
-padding: 22px;
-text-align: center;
-border-radius: 12px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-font-weight: bold;
-font-size: 17px;
-.service-card {
-  padding: 22px;
-  text-align: center;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  font-weight: bold;
-  font-size: 17px;
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
 }
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
 
-        header {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
 
-        header h1 {
-            font-size: 42px;
-            margin: 0;
-        }
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
 
-        header p {
-            font-size: 20px;
-        }
+header p {
+    font-size: 18px;
+}
 
-        .section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
 
-        .card {
-            background: white;
-            width: 220px;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-        }
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
-        .card h3 {
-            margin-top: 0;
-        }
+.category {
+    background: white;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-        .contact {
-            background: #111;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
 
-        .whatsapp {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-    </style>
+.icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category p {
+    color: #666;
+    font-size: 15px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+@media (max-width: 650px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>Meezan Printing Press</h1>
-    <p>Professional Printing & Designing Services</p>
-    <p>Bannu, Khyber Pakhtunkhwa</p>
+    <p>Professional Printing & Designing Services — Bannu</p>
 </header>
 
-<section class="section">
-    <h2>Our Services</h2>
+<div class="container">
 
-    <div class="services">
+    <h2>Our Products & Services</h2>
 
-        <div class="card">
+    <div class="categories">
+
+        <div class="category">
+            <div class="icon">💍</div>
+            <h3>Wedding Cards</h3>
+            <p>Beautiful wedding card designs with different qualities and prices.</p>
+        </div>
+
+        <div class="category">
+            <div class="icon">💳</div>
             <h3>Visiting Cards</h3>
-            <p>Professional and attractive visiting card printing.</p>
+            <p>Professional visiting cards with different qualities and prices.</p>
         </div>
 
-        <div class="card">
-            <h3>Invitation Cards</h3>
-            <p>Wedding, Walima and other invitation cards.</p>
+        <div class="category">
+            <div class="icon">🏫</div>
+            <h3>School Printing & Supplies</h3>
+            <p>School badges, uniforms, fee cards, registers, certificates and more.</p>
         </div>
 
-        <div class="card">
-            <h3>Graphic Designing</h3>
-            <p>Professional designs for your business and events.</p>
-        </div>
-
-        <div class="card">
-            <h3>Printing</h3>
-            <p>High-quality printing for different requirements.</p>
+        <div class="category">
+            <div class="icon">🖨️</div>
+            <h3>General Printing</h3>
+            <p>Bill books, letterheads, brochures, flyers, banners, stickers and more.</p>
         </div>
 
     </div>
-</section>
-
-<section class="contact">
-    <h2>Contact Meezan Printing Press</h2>
-
-    <p>Green Plaza, Chowna Mandi Chowk Bazar, Bannu</p>
-
-    <a class="whatsapp" href="#">Contact on WhatsApp</a>
-</section>
-<section>
-  <h2>Professional Printing Services</h2>
-  <div class="services-grid">
-  <div class="service-card">Visiting Cards</div>
-  <div class="service-card">Wedding & Invitation Cards</div>
-  <div class="service-card">School Printing</div>
-  <div class="service-card">Certificates</div>
-  <div class="service-card">Bill & Receipt Books</div>
-  <div class="service-card">Letterheads & Envelopes</div>
-  <div class="service-card">Brochures & Flyers</div>
-  <div class="service-card">Posters & Banners</div>
-  <div class="service-card">Stickers & Labels</div>
-  <div class="service-card">Books & Booklets</div>
-  <div class="service-card">Digital Printing</div>
-  <div class="service-card">Graphic Designing</div>
 </div>
+
+<footer>
+    <p>Meezan Printing Press, Green Plaza, Chowna Mandi, Chowk Bazar, Bannu</p>
+</footer>
+
 </body>
-    
 </html>
