@@ -812,15 +812,59 @@
             mobileMenu.classList.add('hidden');
         }
 
-        // Populate Wedding Cards (100 slots)
-        function populateWeddingCards() {
+        // Populate Wedding Cards
+function populateWeddingCards() {
     const grid = document.getElementById('wedding-cards-grid');
     if (!grid) return;
 
+    const weddingImages = [
+        "WhatsApp Image 2026-09-27 at 2.42.16 AM (1).jpeg",
+        "Yahya Khan jee (1).jpeg",
+        "Yahya Khan jee (10).jpeg",
+        "Yahya Khan jee (11).jpeg",
+        "Yahya Khan jee (12).jpeg",
+        "Yahya Khan jee (13).jpeg",
+        "Yahya Khan jee (15).jpeg",
+        "Yahya Khan jee (16).jpeg",
+        "Yahya Khan jee (17).jpeg",
+        "Yahya Khan jee (3).jpeg"
+    ];
+
     let html = '';
+
+    weddingImages.forEach((image, index) => {
+        const designNum = index + 1;
+
+        html += `
+            <div class="glass-card rounded-xl p-4 flex flex-col justify-between border border-gold-500/20 group">
+                <div>
+                    <div class="w-full h-64 rounded-lg bg-navy-800 overflow-hidden mb-4">
+                        <img
+                            src="${image}"
+                            alt="Wedding Card Design ${designNum}"
+                            class="w-full h-full object-contain"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x500/111827/d4af37?text=Wedding+Card+${designNum}';"
+                        >
+                    </div>
+
+                    <h3 class="font-serif text-xl font-bold text-white mb-2 group-hover:text-gold-400">
+                        Wedding Card Design ${designNum}
+                    </h3>
+
+                    <p class="text-gray-400 text-sm mb-4">Premium Quality</p>
+                </div>
+
+                <button
+                    onclick="openInquiryModal('Wedding Card Design ${designNum}')"
+                    class="w-full py-2.5 rounded gold-bg-gradient text-navy-900 font-bold text-sm">
+                    Order Now
+                </button>
+            </div>
+        `;
+    });
+
     grid.innerHTML = html;
 }
-
 
 
 
