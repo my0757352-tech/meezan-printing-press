@@ -814,46 +814,13 @@
 
         // Populate Wedding Cards (100 slots)
         function populateWeddingCards() {
-            const grid = document.getElementById('wedding-cards-grid');
-            if (!grid) return;
+    const grid = document.getElementById('wedding-cards-grid');
+    if (!grid) return;
 
-            let html = '';
-            <script>
-const weddingImages = [
-    "WhatsApp Image 2026-09-27 at 2.42.16 AM (1).jpeg",
-    "Yahya Khan jee (1).jpeg",
-    "Yahya Khan jee (10).jpeg",
-    "Yahya Khan jee (11).jpeg",
-    "Yahya Khan jee (12).jpeg",
-    "Yahya Khan jee (13).jpeg",
-    "Yahya Khan jee (15).jpeg",
-    "Yahya Khan jee (16).jpeg",
-    "Yahya Khan jee (17).jpeg",
-    "Yahya Khan jee (3).jpeg"
-];
-
-for (let i = 0; i < weddingImages.length; i++) {
-    let designNum = i + 1;
-
-    document.write(`
-        <div class="design">
-            <img 
-                src="${weddingImages[i]}" 
-                alt="Wedding Card Design ${designNum}"
-                style="width:100%; height:120px; object-fit:contain;"
-                onerror="this.onerror=null; this.src='https://placehold.co/400x500/111827/d4af37?text=Meezan+Wedding+Card+${designNum}';"
-            >
-
-            <h3>Wedding Card Design ${designNum}</h3>
-            <p>Premium Quality</p>
-            <p>Rs. 0</p>
-
-            <button onclick="alert('Order Wedding Card Design ${designNum}')">
-                Order Now
-            </button>
-        </div>
-    `);
+    let html = '';
+    grid.innerHTML = html;
 }
+
 </script>
 
 
