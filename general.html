@@ -123,38 +123,43 @@ button {
 
 <script>
 
-const products = [
-    "Bill Books",
-    "Letterheads",
-    "Envelopes",
-    "Brochures",
-    "Flyers",
-    "Posters",
-    "Banners",
-    "Stickers",
-    "Labels",
-    "Certificates",
-    "Books",
-    "Booklets",
-    "Wedding Invitations",
-    "Business Cards",
-    "Receipt Books",
-    "Quotation Books",
-    "Invoice Books",
-    "Delivery Challans",
-    "Membership Cards",
-    "ID Cards",
-    "Menus",
-    "Calendars",
-    "Notepads",
-    "Folders",
-    "Office Files",
-    "Rubber Stamps",
-    "Product Packaging",
-    "Promotional Cards",
-    "Photo Printing",
-    "Digital Printing"
-];
+
+const imageMap = {
+    "Bill Books": "Bill%20Book.jpg",
+    "Letterheads": "Letterheads.jpg",
+    "Envelopes": "Envelopes.jpg",
+    "Brochures": "Brochures.jpg",
+    "Flyers": "Flyers.jpg",
+    "Posters": "Posters.jpg",
+    "Banners": "Banners.jpg",
+    "Stickers": "Stickers.jpg",
+    "Labels": "Labels.jpg",
+    "Books": "Books.jpg",
+    "Booklets": "Booklets.jpg",
+    "Receipt Books": "Receipt%20Books.jpg"
+};
+
+const items = document.getElementById("items");
+
+products.forEach((product, index) => {
+    const image = imageMap[product];
+
+    items.innerHTML += `
+        <div class="item">
+            ${
+                image
+                ? `<img src="${image}" alt="${product}"
+                     style="width:100%;height:200px;object-fit:contain;border-radius:10px;margin-bottom:12px;">`
+                : `<div class="icon">${icons[index]}</div>`
+            }
+            <h3>${product}</h3>
+            <p>Quality Printing</p>
+            <div class="price">Rs. 0</div>
+            <button>Order Now</button>
+        </div>
+    `;
+});
+
 
 const icons = [
     "📒","📄","✉️","📖","📃","📰","🖼️","🏷️","🔖","🏆",
